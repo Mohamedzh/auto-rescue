@@ -38,7 +38,7 @@ export default function ServicesList() {
           </div>
           <h3 className="text-gray-800">Services:</h3>
           {item.services.map((service, k) => (
-            <div className="flex justify-between mr-96">
+            <div key={k} className="flex justify-between mr-96">
               <p key={k} className="mt-3 truncate text-sm text-gray-500">
                 {"- "}
                 <span className="text-gray-700">{service.name}</span>
