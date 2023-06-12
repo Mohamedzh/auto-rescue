@@ -84,7 +84,7 @@ export default function Login() {
                 Sign in
               </button>
               <p className="text-sm mt-2">
-                Don't have an account?{" "}
+                Don&apos;t have an account?{" "}
                 <Link href="/signup" className="underline">
                   Register a new account
                 </Link>
