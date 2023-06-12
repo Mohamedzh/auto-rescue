@@ -21,7 +21,7 @@ import Link from "next/link";
 
 const userNavigation = [
   { name: "Your profile", href: "/profile" },
-  { name: "Sign out", href: "#" },
+  { name: "Sign out", href: "/login" },
 ];
 
 export default function Sidebar() {
