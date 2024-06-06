@@ -6,3 +6,5 @@ export async function GET(request: NextRequest) {
 
   return NextResponse.json({ products }, { status: 200 });
 }
+
+export const revalidate = 0;
