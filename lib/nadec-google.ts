@@ -26,7 +26,6 @@ export const connectGoogleSheet = async () => {
   const sheet = doc.sheetsByIndex[1];
   const rows = await sheet.getRows();
 
-  const headers = rows[0];
   let targetArr: any[] = [];
   rows.slice(1).map((row) => {
     targetArr.push(row.toObject());
