@@ -1,4 +1,4 @@
-# Auto-Repair Admin Dashboard
+# Auto-Rescue Admin Dashboard
 
 ## Table of contents
 
@@ -8,7 +8,7 @@
 
 ## General info
 
-Admin dashboard for Auto-Repair android/IOS app
+Admin dashboard for Auto-Rescue android/IOS app
 
 ## Technologies
 
