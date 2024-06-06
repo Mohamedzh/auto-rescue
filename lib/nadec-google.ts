@@ -23,7 +23,7 @@ export const connectGoogleSheet = async () => {
 
   await doc.loadInfo();
 
-  const sheet = doc.sheetsByIndex[1];
+  const sheet = doc.sheetsByTitle["Schedule"];
   const rows = await sheet.getRows();
 
   let targetArr: any[] = [];
