@@ -1,7 +1,8 @@
 import { connectGoogleSheet } from "@/lib/nadec-google";
+import { type NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: Request) {
+export async function GET(request: NextRequest) {
   const products = await connectGoogleSheet();
 
-  return Response.json({ products }) as any;
+  return NextResponse.json({ products });
 }
