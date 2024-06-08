@@ -27,6 +27,8 @@ export const connectGoogleSheet = async () => {
   const rows = await sheet.getRows();
 
   let targetArr: any[] = [];
+  // const headerRow = rows[0];
+
   rows.slice(1).map((row) => {
     targetArr.push(row.toObject());
     return targetArr;
@@ -36,13 +38,13 @@ export const connectGoogleSheet = async () => {
     return {
       ...item,
       checkDate:
-        item[Object.keys(item)[7]].split(",")[1].slice(1) +
+        item[Object.keys(item)[8]].split(",")[1].slice(1) +
         ", " +
-        item[Object.keys(item)[7]].split(",")[2].slice(1),
+        item[Object.keys(item)[8]].split(",")[2].slice(1),
       changeDate:
-        item[Object.keys(item)[12]].split(",")[1].slice(1) +
+        item[Object.keys(item)[13]].split(",")[1].slice(1) +
         ", " +
-        item[Object.keys(item)[12]].split(",")[2].slice(1),
+        item[Object.keys(item)[13]].split(",")[2].slice(1),
     };
   });
   return targetArr;
