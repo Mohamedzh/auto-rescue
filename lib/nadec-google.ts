@@ -37,14 +37,18 @@ export const connectGoogleSheet = async () => {
   targetArr = targetArr.map((item) => {
     return {
       ...item,
+      machine: item.Machine.trim(),
+      partName: item["Part Name"].trim(),
+      partNo: item["part NO"],
+      subEquipment: item["Sup Equipment"].trim(),
       checkDate:
-        item[Object.keys(item)[8]].split(",")[1].slice(1) +
+        item["Next \nCHECK date"].split(",")[1].slice(1) +
         ", " +
-        item[Object.keys(item)[8]].split(",")[2].slice(1),
+        item["Next \nCHECK date"].split(",")[2].slice(1),
       changeDate:
-        item[Object.keys(item)[13]].split(",")[1].slice(1) +
+        item["Next \nCHANGE date"].split(",")[1].slice(1) +
         ", " +
-        item[Object.keys(item)[13]].split(",")[2].slice(1),
+        item["Next \nCHANGE date"].split(",")[2].slice(1),
     };
   });
   return targetArr;
